@@ -1,0 +1,32 @@
+#btnlabel {
+  border: 3px solid rgb(85, 239, 196);
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  height: 50px;
+  width: 200px;
+  font-weight: 600;
+}
+
+.medium {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: rgb(85, 239, 196);
+  color: rgb(0, 0, 0);
+  height: 45px;
+  width: 130px;
+  font-weight: 400;
+}
+
+.small {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: rgb(85, 239, 196);
+  color: rgb(0, 0, 0);
+  height: 40px;
+  width: 100px;
+  font-weight: 400;
+}

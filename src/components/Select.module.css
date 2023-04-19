@@ -1,0 +1,55 @@
+.container {
+  border: 3px solid rgb(221, 221, 221);
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+}
+.wrap {
+  display: flex;
+  gap: 10px;
+}
+.btnWrap {
+  position: relative;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 28px;
+  border: 1px solid rgb(221, 221, 221);
+  height: 40px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+}
+
+.dropWrapLeft,
+.dropWrapRight {
+  margin-top: 10px;
+  border: 1px solid rgb(221, 221, 221);
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  height: 200px;
+  width: 300px;
+}
+.dropWrapLeft {
+  position: absolute;
+  top: 51%;
+  left: 0.5%;
+  z-index: 10;
+}
+ul {
+  padding: 10px;
+  margin: 0;
+  height: 100%;
+}
+li {
+  list-style: none;
+  height: 25%;
+  display: flex;
+  align-items: center;
+}
+li:hover {
+  background-color: rgb(221, 221, 221);
+}

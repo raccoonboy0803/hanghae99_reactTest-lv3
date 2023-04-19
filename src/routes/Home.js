@@ -23,13 +23,16 @@ const Home = () => {
       setModaltwo(false);
     }
   };
-  const dropRef = useRef(null);
+  const dropLeftRef = useRef(null);
+  const dropRightRef = useRef(null);
   const dropOutsideClick = (e) => {
-    if (dropRef.current !== e.target) {
-      setRightModal(false);
+    if (dropLeftRef.current !== e.target) {
       setLeftModal(false);
+    } else if (dropRightRef.current !== e.target) {
+      setRightModal(false);
     }
   };
+
   return (
     <div>
       <div onClick={dropOutsideClick}>
@@ -92,7 +95,9 @@ const Home = () => {
           setLeftModal={setLeftModal}
           rightModal={rightModal}
           setRightModal={setRightModal}
-          dropRef={dropRef}
+          dropLeftRef={dropLeftRef}
+          dropRightRef={dropRightRef}
+          dropOutsideClick={dropOutsideClick}
         />
       </div>
     </div>

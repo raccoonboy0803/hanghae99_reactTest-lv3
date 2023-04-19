@@ -6,10 +6,10 @@ function Select({
   setLeftModal,
   rightModal,
   setRightModal,
-  dropRef,
+  dropLeftRef,
+  dropRightRef,
+  dropOutsideClick,
 }) {
-  // const [leftModal, setLeftModal] = useState(false);
-  // const [rightModal, setRightModal] = useState(false);
   const [leftValue, setLeftValue] = useState('리액트');
   const [rightValue, setRightValue] = useState('리액트');
   const leftBtnClick = () => {
@@ -29,17 +29,25 @@ function Select({
 
   return (
     <div>
-      <div className={styled.container}>
+      <div className={styled.container} onClick={dropOutsideClick}>
         <h1>Select</h1>
         <div className={styled.wrap}>
           <div className={styled.btnWrap}>
-            <button className={styled.btn} onClick={leftBtnClick} ref={dropRef}>
+            <button
+              className={styled.btn}
+              onClick={leftBtnClick}
+              ref={dropLeftRef}
+            >
               <div>{leftValue}</div>
               <div>▼</div>
             </button>
           </div>
           <div className={styled.btnWrap}>
-            <button className={styled.btn} onClick={rightBtnClick}>
+            <button
+              className={styled.btn}
+              onClick={rightBtnClick}
+              ref={dropRightRef}
+            >
               <div>{rightValue}</div>
               <div>▼</div>
             </button>
@@ -49,9 +57,7 @@ function Select({
           </div>
         </div>
       </div>
-      {leftModal && (
-        <Dropdownleft leftValueHandle={leftValueHandle} ref={dropRef} />
-      )}
+      {leftModal && <Dropdownleft leftValueHandle={leftValueHandle} />}
     </div>
   );
 }
